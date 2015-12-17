@@ -5,38 +5,22 @@ description: Diana Lee's Blog
 keywords: blog software web dev 
 ---
 
-<h1>Yay!</h1>
-
+<h2>Recent Posts</h2>
 
 <div class="row">
-	<div class="medium-9 large-7 small-centered column">
+	<div class="small-12 columns">
 		
-		<p>Hi.</p>
+	{% for post in site.posts limit:1 %}
+	<article>
+    <a href="{{ post.url }}">
+    <h3 class="text-left">{{ post.title }}</h3>
+    <br>
+    <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+    <div>{{ post.content }}</div>
+    </a>
+	</article>
 
-		<div class="panel radius mvl">
-			<p>Things go here.</p>
-		</div>
-
-	</div>
-</div>
-
-
-<div class="row"> 
-
-	<div class="large-6 columns">
-		<p>Whoo hoo!</p>
-	</div>
-
-	<div class="large-6 columns">
-		<p>Yippee!</p>
-	</div>
-
-</div>
-
-<div class="row">
-	<div class="medium-9 large-7 small-centered column">
-	
-		<p>la la la!</p>
+	{% endfor %}
 
 	</div>
 </div>
