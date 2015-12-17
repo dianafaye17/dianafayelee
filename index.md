@@ -36,8 +36,7 @@ keywords: blog software web dev
 <div class="row">
 	<div class="medium-9 large-7 small-centered column">
 	
-		<i class="fa fa-flag fa-lg">	
-		</i>
+		<p>la la la!</p>
 
 	</div>
 </div>
