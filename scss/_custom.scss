@@ -1,9 +1,13 @@
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
+  text-align: center;
 	@media #{$medium-up} {
 	}
 	@media #{$large-up} {
 	}
+  &.brand {
+    text-align: left;
+  }
 }
 
 //helper for font weight
@@ -19,4 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .font-heavy {
 	font-weight: 800;
+}
+
+#profile-picture {
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
 }

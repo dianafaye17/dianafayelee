@@ -16,10 +16,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Ah, the favicon.
-    ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico">
+    
 
     <!-- Open Graph: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/
     Twitter: https://dev.twitter.com/docs/cards/types/summary-card
@@ -67,7 +64,7 @@
                 </ul>
             </section>
 
-            <h1><a href="{{ site.url }}">{{ site.brand }}</a></h1>
+            <h1 class="brand"><a href="{{ site.url }}">{{ site.brand }}</a></h1>
 
         </div>
     </header>
@@ -94,15 +91,31 @@
 
         <footer class="site-footer row" role="contentinfo">
         <hr/>
-          <div class="large-12 columns">
+          <div class="small-12 columns">
             <ul class="inline-list">
                 {% include nav.html %}
             </ul>
-            <p class="quiet copyright right"><a href="https://github.com/{{ site.github }}/">
-                <i class="fa fa-github">
-                </i>
-             @{{ site.github }}</a></p>
-             
+          </div>
+
+          <div class="small-9 small-offset-3 columns">
+            <ul class="inline-list">
+              <li><a class="quiet copyright" href="https://www.linkedin.com/in/{{ site.linkedin }}/">
+                <i class="fa fa-linkedin-square"></i>
+                @{{ site.linkedin }}</a>
+              </li>
+
+              <li><a class="quiet copyright" href="mailto: dianafaye17@gmail.com">
+                <i class="fa fa-envelope-square"></i>
+                @{{ site.email }}</a>
+              </li>
+              
+              <li><a class="quiet copyright" href="https://github.com/{{ site.github }}/">
+                <i class="fa fa-github-square"></i>
+                @{{ site.github }}</a>
+              </li>
+
+            </ul>
+          </div>
           </div>
         </footer>
 
