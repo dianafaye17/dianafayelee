@@ -5,7 +5,16 @@ layout: default
 
   <header class="post-header">
     <h2 class="post-title">{{ page.title }}</h2>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+    {% if page.categories contains 'project' %}
+      <p class="post-meta">
+        {{ page.date | date: "%Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+      </p>
+    {% else %}
+      <p class="post-meta">
+        {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+      </p>
+    {% endif %}
   </header>
 
   <article class="post-content">

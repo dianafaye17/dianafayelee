@@ -2,8 +2,13 @@
 layout: page
 title: Projects
 ---
-<div class="row">
-  <ul class="small-12 columns">
-    <li>Here are my recent projects.</li>
-  </ul>
-</div>
+  {% for post in site.posts %}
+    {% if post.categories contains 'project' %}
+      <br>
+      <h3 class="text-left">{{ post.title }} &mdash; {{ post.date | date: "%Y" }}</h3>
+      <br>
+     {{ post.content }}
+      <br>
+      <hr>
+    {% endif %}
+  {% endfor %}
