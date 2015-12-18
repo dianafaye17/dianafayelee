@@ -8,10 +8,12 @@ title: Archive
     
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> &mdash; 
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
+      {% unless post.categories contains 'project' %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> &mdash; 
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+      {% endunless %}
     {% endfor %}
   </ul>
 
